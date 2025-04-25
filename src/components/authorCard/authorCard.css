@@ -1,0 +1,44 @@
+/* Container */
+.author-card {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Author Info */
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Avatar */
+  .author-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Author Details */
+  .author-details {
+    flex: 1;
+  }
+  
+  .author-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+  
+  .author-bio {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.5;
+  }

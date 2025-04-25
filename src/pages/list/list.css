@@ -1,0 +1,179 @@
+@import "~leaflet/dist/leaflet.css";
+
+.leaflet-container {
+  height: 250px; /* Chiều cao của bản đồ */
+  width: 100%; /* Chiều rộng của bản đồ */
+}
+
+.listSearch {
+  margin-bottom: 20px; /* Khoảng cách dưới bản đồ */
+}
+
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.listSearch {
+  flex: 1;
+  background-color: #febb02;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+
+.lsTitle{
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lsItem{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem>label{
+  font-size: 12px;
+}
+
+.lsItem>input{
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+.lsItem>span{
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lsOptions{
+  padding: 10px;
+}
+
+.lsOptionItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.lsOptionInput{
+  width: 50px;
+}
+
+.listSearch>button{
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+  flex: 3;
+}
+
+/* Thêm vào file list.css */
+.pagination {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #0071c2;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #0071c2;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background: #0071c2;
+  color: white;
+}
+
+.bright-map {
+  filter: brightness(1.2); /* Tăng độ sáng lên 20% */
+}
+
+.mapSection {
+  margin: 40px auto;
+  max-width: 1024px;
+  padding: 0 10px;
+}
+
+.mapTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.mapContainerWrapper {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mapContainerWrapper .leaflet-container {
+  width: 100% !important;
+  height: 250px;
+  transition: height 0.3s ease;
+}
+
+.mapContainerWrapper.expanded .leaflet-container {
+  height: 100vh;
+}
+
+.mapToggleBtn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #0071c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.mapToggleBtn:hover {
+  background: #005b9e;
+}
+
+

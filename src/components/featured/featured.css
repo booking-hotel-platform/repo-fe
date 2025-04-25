@@ -1,0 +1,93 @@
+/* featured.css */
+.featured {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.featuredItem {
+  position: relative;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 280px;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featuredItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featuredItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 120%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.featuredItem:hover::before {
+  opacity: 0.9;
+}
+
+.featuredImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featuredItem:hover .featuredImg {
+  transform: scale(1.05);
+}
+
+.featuredTitles {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.featuredItem:hover .featuredTitles {
+  bottom: 35px;
+}
+
+.featuredTitles h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.featuredTitles h2 {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  

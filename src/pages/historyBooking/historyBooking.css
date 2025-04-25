@@ -1,0 +1,154 @@
+.booking-history-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .booking-history-header {
+    margin-bottom: 2rem;
+  }
+  
+  .page-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #1a365d;
+    margin-bottom: 2rem;
+  }
+  
+  .control-bar {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .search-filter-group {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .search-input {
+    position: relative;
+    flex: 1;
+  }
+  
+  .search-input input {
+    width: 100%;
+    padding: 0.75rem 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+  }
+  
+  .booking-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .booking-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .booking-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .booking-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .booking-id {
+    font-weight: 600;
+    color: #475569;
+  }
+  
+  .status-tag {
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .room-info {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .room-thumbnail {
+    width: 120px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .room-name {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.1rem;
+  }
+  
+  .booking-dates {
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  
+  .price-section {
+    text-align: right;
+  }
+  
+  .price-label {
+    display: block;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  
+  .price-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .booking-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+  }
+  
+  /* Trạng thái đặc biệt */
+  .booking-card.status-cancelled {
+    opacity: 0.8;
+    background: #fff5f5;
+  }
+  
+  .booking-card.status-pending {
+    background: #fff9ed;
+  }
