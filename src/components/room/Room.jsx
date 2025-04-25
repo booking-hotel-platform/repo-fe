@@ -1,6 +1,6 @@
 import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import { useSelector } from 'react-redux';
 import { parseEncodedDate } from '../../utils/dateUtils/parseEncodeTimeZoned';
@@ -18,10 +18,8 @@ const Room = ({ room }) => {
   const [open, setOpen] = useState(false);
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
   const [days, setDays] = useState(null);
-  const { data: dataImg, loading } = useFetch(`${process.env.REACT_APP_API_URL}/images/imageByRoom?roomId=${room?.roomId || 5}`)
+  const { data: dataImg, loading } = useFetch(`${process.env.REACT_APP_API_URL}/images/imageByRoom?roomId=${room?.roomId || 5}`);
 
   const errorSearch = useCallback((message) => {
     messageApi.open({
@@ -49,20 +47,21 @@ const Room = ({ room }) => {
     if (newCheckIn && newCheckOut) {
       setCheckIn(newCheckIn);
       setCheckOut(newCheckOut);
+      setDays(dayDifference(newCheckOut, newCheckIn));
     }
-  }
+  };
 
   const { dates } = useSelector(state => state.search);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
 
-  const dayDifference = (date1, date2) => {
+  const dayDifference = useCallback((date1, date2) => {
     if (!date1 || !date2) return 0; // Trả về 0 nếu một trong hai ngày là null hoặc không hợp lệ
 
     const timeDiff = Math.abs(date2.getTime() - date1.getTime());
     const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
     return diffDays;
-  }
+  }, [MILLISECONDS_PER_DAY]);
 
   useEffect(() => {
     if (dates[0]?.startDate && dates[0]?.endDate) {
@@ -71,20 +70,12 @@ const Room = ({ room }) => {
 
       // Kiểm tra nếu parsedStartDate và parsedEndDate hợp lệ
       if (parsedStartDate && parsedEndDate) {
-        setStartDate(parsedStartDate);
-        setEndDate(parsedEndDate);
+        setCheckIn(parsedStartDate);
+        setCheckOut(parsedEndDate);
         setDays(dayDifference(parsedEndDate, parsedStartDate));
       }
     }
-  }, [dates]);
-
-  useEffect(() => {
-    if (checkIn && checkOut) {
-      setStartDate(checkIn);
-      setEndDate(checkOut);
-      setDays(dayDifference(checkOut, checkIn));
-    }
-  }, [checkIn, checkOut]);
+  }, [dates, dayDifference]);
 
   const handleCreateBooking = async () => {
     try {
@@ -132,7 +123,7 @@ const Room = ({ room }) => {
       newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
     }
 
-    setSlideNumber(newSlideNumber)
+    setSlideNumber(newSlideNumber);
   };
 
   return (
@@ -261,6 +252,6 @@ const Room = ({ room }) => {
       </div>}
     </div>
   );
-}
+};
 
 export default Room;

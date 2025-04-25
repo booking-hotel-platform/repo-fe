@@ -17,10 +17,10 @@ const DropDownAccount = () => {
   useEffect(() => {
     if (user) {
       try {
-        const decodedToken = jwtDecode(user); // Giải mã JWT
+        const decodedToken = jwtDecode(user);
         form.setFieldsValue({
-          name: decodedToken.username || '', // Gán username vào form
-          email: decodedToken.email || '', // Gán email vào form nếu có
+          name: decodedToken.username || '',
+          email: decodedToken.email || '',
         });
       } catch (error) {
         console.error('Error decoding token:', error);
@@ -41,6 +41,7 @@ const DropDownAccount = () => {
     form.validateFields()
       .then(values => {
         // Xử lý lưu thông tin người dùng ở đây
+        console.log('Received values:', values);
         setIsModalVisible(false);
       })
       .catch(info => {
@@ -103,7 +104,7 @@ const DropDownAccount = () => {
 
       <Modal
         title="User Information"
-        visible={isModalVisible}
+        open={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
@@ -122,7 +123,6 @@ const DropDownAccount = () => {
           >
             <Input />
           </Form.Item>
-          {/* Thêm các trường thông tin khác nếu cần */}
         </Form>
       </Modal>
     </>

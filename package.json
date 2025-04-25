@@ -36,8 +36,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test",
-    "build": "npx browserslist@latest --update-db && react-scripts build"
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [

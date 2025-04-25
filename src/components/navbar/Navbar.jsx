@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './navbar.css';
 import {
@@ -18,7 +18,7 @@ import DropDownAccount from "../dropDownAccount/DropDownAccount";
 const Navbar = () => {
   const navigate = useNavigate();
   const [openBasic, setOpenBasic] = useState(false);
-  const { user} = useSelector(state => state.auth);
+  const { user } = useSelector(state => state.auth);
 
   return (
     <MDBNavbar expand='lg' light bgColor='light' className='mdb-navbar-custom shadow-sm'>
@@ -47,7 +47,6 @@ const Navbar = () => {
 
       <MDBCollapse navbar open={openBasic} className='justify-content-end'>
         <MDBNavbarNav className='mb-2 mb-lg-0 align-items-center'>
-          {/* Thêm menu items nếu cần */}
           <MDBNavbarItem className='mx-2'>
             <MDBNavbarLink href='#'>About</MDBNavbarLink>
           </MDBNavbarItem>
