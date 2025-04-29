@@ -1,0 +1,114 @@
+.chatbot-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chatbot-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .chatbox {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .user-input:focus {
+    border-color: #007bff;
+  }
+  
+  .send-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .clear-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .clear-button:hover {
+    background-color: #5a6268;
+  }
+  .chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .chatbot-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 500px; /* Tăng chiều rộng */
+    max-height: 600px; /* Tăng chiều cao tối đa */
+    background-color: #fff;
+    border-radius: 10px; /* Làm bo góc */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .chatbot-popup .chatbot-header {
+    background-color: #007bff; /* Đổi màu nền tiêu đề */
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .chatbot-popup .chatbot-content {
+    padding: 20px;
+  }
+  
+  
+  
