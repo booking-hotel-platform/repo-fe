@@ -48,7 +48,7 @@ const Navbar = () => {
       <MDBCollapse navbar open={openBasic} className='justify-content-end'>
         <MDBNavbarNav className='mb-2 mb-lg-0 align-items-center'>
           <MDBNavbarItem className='mx-2'>
-            <MDBNavbarLink href='#'>About</MDBNavbarLink>
+            <MDBNavbarLink href='/chatbot'>About</MDBNavbarLink>
           </MDBNavbarItem>
 
           {user ? (
