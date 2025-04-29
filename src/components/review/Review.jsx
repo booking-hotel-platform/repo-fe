@@ -26,7 +26,9 @@ const ReviewSection = ({reviews, setReviews}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/reviews?hotelId=${hotelId}`, newReview);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/reviews?hotelId=${hotelId}`, newReview, {
+        withCredentials: true
+      });
       setReviews(prev => [res.data, ...prev]);
     } catch (error) {
       console.error('Error submitting review:', error);

@@ -10,6 +10,7 @@ import axios from 'axios';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import Amenities from '../amenities/Amenities';
 
 const Room = ({ room }) => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -176,6 +177,7 @@ const Room = ({ room }) => {
               </div>
             ))}
           </div>
+          <Amenities/>
           <div className="hotelDetails">
             <div className="hotelDetailsTexts">
               <h1 className="hotelTitle">Stay in the heart of City</h1>

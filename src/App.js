@@ -14,6 +14,7 @@ import ResetPassword from "./pages/resetPassword/ResetPassword";
 import PaymentSuccess from "./pages/paymentSuccess/PaymentSuccess";
 import PaymentCancel from "./pages/paymentCancel/PaymentCancel";
 import BookingHistory from "./pages/historyBooking/HistoryBooking";
+import Chatbot from "./components/chatbot/Chatbot";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/checkout/cancel" element={<PaymentCancel />} />
         <Route path="/booking-history" element={<BookingHistory />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </Router>
   );

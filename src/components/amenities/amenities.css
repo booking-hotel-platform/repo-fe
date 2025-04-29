@@ -1,0 +1,22 @@
+/* amenities.css */
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các ô xếp thành hàng */
+    justify-content: center;
+  }
+  
+  .grid > div {
+    flex: 1 0 30%; /* Chiều rộng tối thiểu cho mỗi ô */
+    max-width: 180px; /* Kích thước tối đa của mỗi ô */
+    margin: 5px; /* Khoảng cách giữa các ô */
+    text-align: center; /* Căn giữa nội dung */
+    border: 1px solid #ccc; /* Đường viền cho ô */
+    border-radius: 8px; /* Bo tròn góc */
+    padding: 10px; /* Khoảng cách bên trong ô */
+    transition: box-shadow 0.3s; /* Hiệu ứng chuyển tiếp cho bóng */
+  }
+  
+  .grid > div:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng khi hover */
+  }
+  
