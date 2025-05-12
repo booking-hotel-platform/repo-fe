@@ -9,7 +9,7 @@ const Chatbot = () => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  
   const genAI = new GoogleGenerativeAI(
     "AIzaSyAqWT6nWJM3E450B5Aqb-qbg16A_wLWN0o"
   );
