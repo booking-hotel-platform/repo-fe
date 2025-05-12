@@ -52,7 +52,7 @@ const authSlice = createSlice({
           Cookies.set('access_token', JSON.stringify(action.payload.accessToken), { 
             expires: 7, 
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict'
+            sameSite: 'None'
           });
         }
       })
