@@ -51,8 +51,8 @@ const authSlice = createSlice({
         if(Cookies.get('access_token') == null) {
           Cookies.set('access_token', JSON.stringify(action.payload.accessToken), { 
             expires: 7, 
-            secure: process.env.REACT_APP_API_URL === 'production',
-            sameSite: 'Strict'
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'None'
           });
         }
       })
