@@ -46,16 +46,16 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // .addCase(login.fulfilled, (state, action) => {
-      //   state.user = action.payload.accessToken;
-      //   if(Cookies.get('access_token') == null) {
-      //     Cookies.set('access_token', JSON.stringify(action.payload.accessToken), { 
-      //       expires: 7, 
-      //       secure: process.env.NODE_ENV === 'production',
-      //       sameSite: 'None'
-      //     });
-      //   }
-      // })
+      .addCase(login.fulfilled, (state, action) => {
+        state.user = action.payload.accessToken;
+        // if(Cookies.get('access_token') == null) {
+        //   Cookies.set('access_token', JSON.stringify(action.payload.accessToken), { 
+        //     expires: 7, 
+        //     secure: process.env.NODE_ENV === 'production',
+        //     sameSite: 'None'
+        //   });
+        // }
+      })
       .addCase(login.rejected, (state, action) => {
         state.error = action.payload;
       })
