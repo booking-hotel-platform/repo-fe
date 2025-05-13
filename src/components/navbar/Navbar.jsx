@@ -19,7 +19,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [openBasic, setOpenBasic] = useState(false);
   const { user } = useSelector(state => state.auth);
-
+  console.log('user >> ', user)
   return (
     <MDBNavbar expand='lg' light bgColor='light' className='mdb-navbar-custom shadow-sm'>
       <MDBNavbarBrand 
