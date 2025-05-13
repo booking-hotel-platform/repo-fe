@@ -35,7 +35,8 @@ export const login = createAsyncThunk(
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: JSON.stringify(Cookies.get('access_token')) || null, 
+    user: Cookies.get('access_token') || null, 
+    // user: JSON.stringify(Cookies.get('access_token')) || null, 
     error: null
   },
   reducers: {
