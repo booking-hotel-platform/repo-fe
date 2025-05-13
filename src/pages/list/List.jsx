@@ -12,7 +12,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import axios from 'axios';
 import 'leaflet/dist/leaflet.css';
 import '../../components/map/fixLeafletIcon';
-
+import Loading from "../../components/Loading";
 const List = () => {
   const [mapCenter, setMapCenter] = useState([16.0583, 108.2772]); 
 
@@ -63,14 +63,13 @@ const List = () => {
 
   return (
     <div>
-      {contextHolder}
       <Navbar />
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listResult">
             {loading ? (
-              "Đang tải..."
+              <><Loading isLoading={loading}/></>
             ) : (
               <>
                 {currentItems.map((item, index) => (

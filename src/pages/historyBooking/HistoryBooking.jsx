@@ -72,7 +72,7 @@ const BookingHistory = () => {
     }, [dataBookingHistory, filters, pagination]);
 
     const handlePaymentAgain = async (bookingId) => {
-        const resPayment = await axios.post(`/payments/checkout?bookingId=${bookingId}`);
+        const resPayment = await axios.post(`${process.env.REACT_APP_API_URL}/payments/checkout?bookingId=${bookingId}`);
         const paymentUrl = resPayment?.data?.sessionUrl;
         if (paymentUrl) {
             window.location.href = paymentUrl;

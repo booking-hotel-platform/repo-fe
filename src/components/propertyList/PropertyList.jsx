@@ -15,7 +15,7 @@ const PropertyList = () => {
 
   return (
     <div className="pList">
-      {loading ? <Loading/>
+      {loading ? <Loading isLoading={loading}/>
         :
         <>
           {top5Hotels?.map((hotel) => {

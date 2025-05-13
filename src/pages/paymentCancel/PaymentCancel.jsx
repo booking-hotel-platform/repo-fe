@@ -20,7 +20,7 @@ const PaymentCancel = () => {
           <h2 className="payment-title">Lỗi: Thiếu ID đơn hàng</h2>
           <Button className="return-home-btn" onClick={() => navigate('/')}>
             <Home />
-            Về trang chủ
+            Back Home Page
           </Button>
         </div>
       </div>
