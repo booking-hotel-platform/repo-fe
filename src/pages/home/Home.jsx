@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <FeaturedProperties />
         <div className="homeContent">
-          <h1 className="homeTitle">Suggestions for discovery</h1>
+          <h1 className="homeTitle">Top 5 highest rated hotels</h1>
           <p className="homeTitleDetail">Popular places to stay that Chisfis recommends for you</p>
         </div>
         <PropertyList />

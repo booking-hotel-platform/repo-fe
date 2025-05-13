@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+
 const ChatHistory = ({ chatHistory }) => {
   return (
     <>
@@ -17,7 +18,11 @@ const ChatHistory = ({ chatHistory }) => {
           )}
 
           <div>
-            <ReactMarkdown>{message.message}</ReactMarkdown>
+            {typeof message.message === 'string' ? (
+              <ReactMarkdown>{message.message}</ReactMarkdown>
+            ) : (
+              message.message // Render trực tiếp nếu là component
+            )}
           </div>
         </div>
       ))}

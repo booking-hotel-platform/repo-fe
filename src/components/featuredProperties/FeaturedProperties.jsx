@@ -1,7 +1,7 @@
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 import { useNavigate } from "react-router-dom";
-
+import Loading from "../Loading";
 const FeaturedProperties = () => {
   const navigate = useNavigate();
   const { data = [], loading } = useFetch(`${process.env.REACT_APP_API_URL}/hotels/limit?limit=4`);
@@ -12,7 +12,7 @@ const FeaturedProperties = () => {
   return (
     <div className="fp">
       {loading ? (
-        <div className="loading-text">Loading...</div>
+        <div className="loading-text"><Loading/></div>
       ) : (
         <>
           {data?.map((item, index) => (

@@ -11,7 +11,7 @@ import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Amenities from '../amenities/Amenities';
-
+import Loading from '../Loading';
 const Room = ({ room }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [messageApi, contextHolder] = message.useMessage();
@@ -130,7 +130,7 @@ const Room = ({ room }) => {
   return (
     <div>
       {contextHolder}
-      {loading ? "Loading..." : <div className="hotelContainer">
+      {loading ? <Loading/> : <div className="hotelContainer">
         {open && (
           <div className="slider">
             <FontAwesomeIcon

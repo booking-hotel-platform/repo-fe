@@ -111,4 +111,14 @@
   }
   
   
-  
+  .hotel-info {
+    margin-bottom: 15px;
+}
+
+.hotel-info strong {
+    color: #007bff; /* Màu sắc cho tên và thông tin */
+}
+
+.hotel-info hr {
+    border: 1px solid #ccc; /* Đường phân cách giữa các khách sạn */
+}

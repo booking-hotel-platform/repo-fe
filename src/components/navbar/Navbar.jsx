@@ -57,16 +57,6 @@ const Navbar = () => {
             </MDBNavbarItem>
           ) : (
             <>
-            <MDBNavbarItem className='mx-2'>
-                <MDBBtn 
-                  outline 
-                  color='primary' 
-                  className='px-4'
-                  onClick={() => navigate('/chatbot')}
-                >
-                  Chatbot
-                </MDBBtn>
-              </MDBNavbarItem>
               <MDBNavbarItem className='mx-2'>
                 <MDBBtn 
                   outline 
