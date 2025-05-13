@@ -22,7 +22,7 @@ const Chatbot = () => {
       <strong>City:</strong> {hotel.city}<br />
       <strong>Description:</strong> {hotel.description}<br />
       <strong>Rating:</strong> {hotel.rating}<br />
-      <a href={`https://starlit-fudge-cef549.netlify.app//hotels/${hotel.id}`}><img src={hotel.photos} alt={hotel.name} className="hotel-image" /></a>
+      <a href={`https://starlit-fudge-cef549.netlify.app/hotels/${hotel.id}`}><img src={hotel.photos} alt={hotel.name} className="hotel-image" /></a>
     </div>
   );
 
